@@ -8,6 +8,7 @@ import { useEdgesState, useNodesState } from "reactflow";
 import { SignedIn, UserButton } from "@clerk/nextjs";
 import { TheAlertDialog } from "@/components/alertDialog";
 import { Subscription } from "@/components/subscription";
+import Image from "next/image";
 
 const initialData = {
     nodes: [
@@ -15,12 +16,12 @@ const initialData = {
             id: '1',
             type: 'input',
             data: { label: 'Enter the prompt' },
-            position: { x: 250, y: 25 },
+            position: { x: 370, y: 300 },
         },
         {
             id: '2',
             data: { label: 'Hit the Generate button' },
-            position: { x: 100, y: 125 },
+            position: { x: 520, y: 400 },
         },
     ],
     edges: [
@@ -97,7 +98,15 @@ export default function Roadmap() {
             <aside className="flex flex-col items-center w-96 h-screen bg-slate-800 justify-between">
                 <div className="gap-10">
                     <div className="mt-5 flex flex-row justify-between">
-                        <h1 className="text-2xl text-white">Roadmap Generator</h1>
+                        <div className="flex flex-row gap-1 items-center">
+                            <Image
+                                src={"/icon.svg"}
+                                alt="Get RoadMaps"
+                                width={40}
+                                height={40}
+                            />
+                            <h1 className="hidden sm:block bg-gradient-to-r from-emerald-300 via-green-500 to-lime-300 bg-clip-text text-2xl tracking-tight text-transparent font-bold">Get RoadMaps</h1>
+                        </div>
                         <SignedIn>
                             <UserButton />
                         </SignedIn>
