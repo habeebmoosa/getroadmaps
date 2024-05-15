@@ -9,6 +9,7 @@ import { SignedIn, UserButton } from "@clerk/nextjs";
 import { TheAlertDialog } from "@/components/alertDialog";
 import { Subscription } from "@/components/subscription";
 import Image from "next/image";
+import Link from "next/link";
 
 const initialData = {
     nodes: [
@@ -98,7 +99,7 @@ export default function Roadmap() {
             <aside className="flex flex-col items-center w-96 h-screen bg-slate-800 justify-between">
                 <div className="gap-10">
                     <div className="mt-5 flex flex-row justify-between">
-                        <div className="flex flex-row gap-1 items-center">
+                        <Link href={"/"} className="flex flex-row items-center gap-1">
                             <Image
                                 src={"/icon.svg"}
                                 alt="Get RoadMaps"
@@ -106,7 +107,7 @@ export default function Roadmap() {
                                 height={40}
                             />
                             <h1 className="hidden sm:block bg-gradient-to-r from-emerald-300 via-green-500 to-lime-300 bg-clip-text text-2xl tracking-tight text-transparent font-bold">Get RoadMaps</h1>
-                        </div>
+                        </Link>
                         <SignedIn>
                             <UserButton />
                         </SignedIn>

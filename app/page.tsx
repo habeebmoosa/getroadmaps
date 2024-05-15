@@ -8,6 +8,11 @@ import { FaCheck } from "react-icons/fa";
 export default function Home() {
   return (
     <main className="bg-gray-200">
+      <div className="w-full bg-black">
+        <p className="text-gray-300 text-center py-1">
+          This is the developement version of [Get RoadMaps]. It has some bugs. Please report any issues or improvement to the developer.<a href={"https://habeebmoosa.vercel.app"} target={"_blank"} className="bg-gradient-to-r from-emerald-300 via-green-500 to-lime-300 bg-clip-text tracking-tight text-transparent"> Report</a>
+        </p>
+      </div>
       <Navbar />
       <div className="flex flex-col items-center">
         <header className="flex flex-col justify-center items-center mt-36">

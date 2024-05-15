@@ -7,7 +7,7 @@ export const Navbar = () => {
     return (
         <nav className="p-2">
             <div className="sm:px-12 mx-auto flex items-center justify-between p-4 bg-white shadow-lg rounded-2xl">
-                <Link href={"/"} className="flex flex-row items-center gap-2">
+                <Link href={"/"} className="flex flex-row items-center gap-1">
                     <Image
                         src={"/icon.svg"}
                         alt="Get RoadMaps"

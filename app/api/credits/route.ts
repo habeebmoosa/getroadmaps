@@ -16,7 +16,7 @@ export async function GET(req: Request){
             const newUser = new User({userId});
             const newuser = await newUser.save();
 
-            return new Response(JSON.stringify({newuser}), {status: 200});
+            return new Response(JSON.stringify({user:newuser}), {status: 200});
         }
     
         return new Response(JSON.stringify({user}), {status: 200});

@@ -19,7 +19,7 @@ export const Footer = () => {
             <div className="flex flex-col items-center justify-center p-4">
                 <p className="text-gray-200">&copy; 2024 <Link href={"/"} className="hover:text-gray-400 hover:underline">Get RoadMaps.</Link> All rights reserved.</p>
                 <p className="text-gray-200">Designed and developed by</p>
-                <p><a href={"https://habeebmoosa.vercel.app"} className="bg-gradient-to-r from-emerald-300 via-green-500 to-lime-300 bg-clip-text tracking-tight text-transparent"> Habeeb Moosa</a></p>
+                <p><a href={"https://habeebmoosa.vercel.app"} target={"_blank"} className="bg-gradient-to-r from-emerald-300 via-green-500 to-lime-300 bg-clip-text tracking-tight text-transparent"> Habeeb Moosa</a></p>
             </div>
         </footer>
     )
