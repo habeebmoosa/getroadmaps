@@ -25,6 +25,7 @@ export function DownloadFlow({ nodes }: DownloadFlowProps) {
         toPng(document.querySelector(".react-flow__viewport") as HTMLElement, {
             width: imageWidth,
             height: imageHeight,
+            backgroundColor: "white",
             style: {
                 width: String(imageWidth),
                 height: String(imageHeight),
@@ -40,7 +41,7 @@ export function DownloadFlow({ nodes }: DownloadFlowProps) {
     }
 
     return (
-        <MdDownload onClick={handleActualDownload} />
+        <MdDownload title="Download" onClick={handleActualDownload} />
     );
 }
 
@@ -56,7 +57,7 @@ function downloadImage(dataUrl: string, name?: string) {
     ).padStart(2, "0")}${String(now.getSeconds()).padStart(2, "0")}`;
 
     const fileNamePrefix = name ? `${name}_` : "reactflow_";
-    const fileName = `${fileNamePrefix}${dateStr}_${timeStr}.png`;
+    const fileName = `${fileNamePrefix}${dateStr}_${timeStr}.jpg`;
 
     const a = document.createElement("a");
     a.setAttribute("download", fileName);

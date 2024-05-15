@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback } from 'react';
+import { useCallback, useState } from 'react';
 import ReactFlow, {
     addEdge,
     Connection,
@@ -9,11 +9,13 @@ import ReactFlow, {
     ReactFlowProvider,
     Background,
     BackgroundVariant,
-    ControlButton
+    ControlButton,
+    MiniMap
 } from 'reactflow';
 
 import 'reactflow/dist/style.css';
 import { DownloadFlow } from './roadmappdf';
+import { RiMap2Line } from 'react-icons/ri';
 
 interface RoadMapProps {
     nodes: any;
@@ -35,10 +37,14 @@ export const RoadMap = ({
     setEdges
 }: RoadMapProps) => {
 
+    const [showMap, setShowMap] = useState<boolean>(false);
+
     const onConnect = useCallback(
         (params: Connection | Edge) => setEdges((eds: Edge[]) => addEdge(params, eds)),
         [setEdges],
     );
+
+    const proOptions = { hideAttribution: true };
 
     return (
         <div className='w-[75vw] h-[100vh]'>
@@ -49,13 +55,20 @@ export const RoadMap = ({
                     onNodesChange={onNodesChange}
                     onEdgesChange={onEdgesChange}
                     onConnect={onConnect}
+                    proOptions={proOptions}
                 >
                     <Controls className='p-1 flex flex-col items-center justify-center bg-slate-800 rounded-sm'>
                         <ControlButton>
                             <DownloadFlow nodes={nodes} />
                         </ControlButton>
+                        <ControlButton onClick={() => setShowMap(!showMap)}>
+                            <RiMap2Line title='Map view' />
+                        </ControlButton>
                     </Controls>
                     <Background variant={BackgroundVariant.Dots} gap={12} size={1} />
+                    <div className='bg-red-50 p-1'>
+                        {showMap && <MiniMap />}
+                    </div>
                 </ReactFlow>
             </ReactFlowProvider>
         </div>
