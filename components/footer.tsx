@@ -12,10 +12,10 @@ export const Footer = () => {
                         width={40}
                         height={40}
                     />
-                    <h1 className="hidden sm:block bg-gradient-to-r from-emerald-300 via-green-500 to-lime-300 bg-clip-text text-2xl tracking-tight text-transparent font-bold">Get RoadMaps</h1>
+                    <h1 className="bg-gradient-to-r from-emerald-300 via-green-500 to-lime-300 bg-clip-text text-2xl tracking-tight text-transparent font-bold">Get RoadMaps</h1>
                 </Link>
             </div>
-            <div className="w-96 h-[0.07rem] bg-gray-500"></div>
+            <div className="w-64 h-[0.07rem] bg-gray-500"></div>
             <div className="flex flex-col items-center justify-center p-4">
                 <p className="text-gray-200">&copy; 2024 <Link href={"/"} className="hover:text-gray-400 hover:underline">Get RoadMaps.</Link> All rights reserved.</p>
                 <p className="text-gray-200">Designed and developed by</p>

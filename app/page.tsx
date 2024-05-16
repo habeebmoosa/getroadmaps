@@ -10,13 +10,15 @@ export default function Home() {
     <main className="bg-gray-200">
       <div className="w-full bg-black">
         <p className="text-gray-300 text-center py-1">
-          This is the developement version of [Get RoadMaps]. It has some bugs. Please report any issues or improvement to the developer.<a href={"https://habeebmoosa.vercel.app"} target={"_blank"} className="bg-gradient-to-r from-emerald-300 via-green-500 to-lime-300 bg-clip-text tracking-tight text-transparent"> Report</a>
+          This is the developement version of [Get RoadMaps]. It has some bugs. Please report any issues or improvement to the developer.<a href={"https://docs.google.com/forms/d/e/1FAIpQLScNZ6vtlFMkmo0t_dWTx6CXfoEIZzm5KAjg-euCA49046beKw/viewform?usp=sf_link"} target={"_blank"} className="bg-gradient-to-r from-emerald-300 via-green-500 to-lime-300 bg-clip-text tracking-tight text-transparent"> Report</a>
         </p>
       </div>
       <Navbar />
+
       <div className="flex flex-col items-center">
         <header className="flex flex-col justify-center items-center mt-36">
           <div className="flex justify-center items-center text-center">
+          <h1 data-animate="title" className="md:hidden text-5xl font-bold"> Welcome to <br /><span className="bg-gradient-to-r from-emerald-300 via-green-500 to-lime-300 bg-clip-text tracking-tight text-transparent">Get RoadMaps</span></h1>
             <h1 data-animate="title" className="hidden md:block text-6xl font-bold"> Welcome to <span className="bg-gradient-to-r from-emerald-300 via-green-500 to-lime-300 bg-clip-text tracking-tight text-transparent">Get RoadMaps</span></h1>
           </div>
           <div className="mt-8 px-1">
@@ -76,7 +78,7 @@ export default function Home() {
         <div>
           <h2 className="text-4xl font-bold">Pricing</h2>
         </div>
-        <div className="flex flex-row gap-10">
+        <div className="flex flex-col gap-10 md:flex-row">
           <div className="flex flex-col gap-10 w-72 min-h-96 p-10 bg-slate-200 border-3 shadow-lg rounded-3xl">
             <h3 className="text-2xl font-bold text-gray-700 text-center">Free</h3>
             <div className="flex flex-col gap-5">
