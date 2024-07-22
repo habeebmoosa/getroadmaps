@@ -129,7 +129,7 @@ export default function Roadmap() {
     return (
         <div>
             <div className="xl:hidden flex items-center flex-col gap-5">
-                <h1 className="text-center text-2xl mt-24 px-5">At this time, <span className="bg-gradient-to-r from-emerald-300 via-green-500 to-lime-300 bg-clip-text tracking-tight text-transparent">Get RoadMaps</span> doesn't support mobile view. You can access on desktop.
+                <h1 className="text-center text-2xl mt-24 px-5">At this time, <span className="bg-gradient-to-r from-emerald-300 via-green-500 to-lime-300 bg-clip-text tracking-tight text-transparent">Get RoadMaps</span> does not support mobile view. You can access on desktop.
                     If there is any issues give feedback on GitHub.
                 </h1>
                 <Link href={"/"} className="">
