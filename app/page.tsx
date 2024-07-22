@@ -3,18 +3,12 @@ import { Navbar } from "@/components/navbar";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
-import { FaCheck } from "react-icons/fa";
+import { FaCheck, FaGithub } from "react-icons/fa";
 
 export default function Home() {
   return (
     <main className="bg-gray-200">
-      <div className="w-full bg-black">
-        <p className="text-gray-300 text-center py-1">
-          This is the developement version of [Get RoadMaps]. It has some bugs. Please report any issues or improvement to the developer.<a href={"https://docs.google.com/forms/d/e/1FAIpQLScNZ6vtlFMkmo0t_dWTx6CXfoEIZzm5KAjg-euCA49046beKw/viewform?usp=sf_link"} target={"_blank"} className="bg-gradient-to-r from-emerald-300 via-green-500 to-lime-300 bg-clip-text tracking-tight text-transparent"> Report</a>
-        </p>
-      </div>
       <Navbar />
-
       <div className="flex flex-col items-center">
         <header className="flex flex-col justify-center items-center mt-36">
           <div className="flex justify-center items-center text-center">
@@ -35,7 +29,7 @@ export default function Home() {
       </div>
       <div className="flex flex-col items-center mt-20 mx-2">
         <Image
-          src="/hero-image.png"
+          src="/heroImage.png"
           alt="Code Editor"
           width={1000}
           height={600}
@@ -64,9 +58,9 @@ export default function Home() {
           </div>
           <div className="w-1 h-20 lg:w-40 lg:h-1 bg-gray-300"></div>
           <div className="flex flex-col items-center gap-2 w-64 min-h-64 max-h-64 p-10 bg-emerald-300 text-gray-900 shadow-lg rounded-3xl">
-            <h3 className="text-2xl font-bold">Download</h3>
+            <h3 className="text-2xl font-bold">Save Roadmap</h3>
             <p className="text-lg max-w-[40rem] text-center text-gray-500">
-              You can download the roadmap Image and use it for your reference.
+              You can store the roadmaps and download the Image and use it for your reference.
             </p>
           </div>
         </div>
@@ -121,6 +115,18 @@ export default function Home() {
               <Button disabled>Coming Soon!</Button>
             </div>
           </div>
+        </div>
+      </section>
+      <section className="flex flex-col items-center mt-32 gap-20">
+        <div>
+          <h2 className="text-4xl font-bold">Open Source</h2>
+        </div>
+        <div className="flex flex-col gap-10 md:flex-row">
+          <Link href="https://github.com/habeebmoosa/getroadmaps" target="_blank">
+            <Button>
+              <FaGithub className="mr-2" /> View on GitHub
+            </Button>
+          </Link>
         </div>
       </section>
       <Footer />

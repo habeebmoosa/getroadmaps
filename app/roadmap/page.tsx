@@ -129,12 +129,12 @@ export default function Roadmap() {
     return (
         <div>
             <div className="xl:hidden flex items-center flex-col gap-5">
-                <h1 className="text-center text-2xl mt-24 px-5">At this time, our web app does not support mobile devices.
-                    If there is any issues give feedback to us.
+                <h1 className="text-center text-2xl mt-24 px-5">At this time, <span className="bg-gradient-to-r from-emerald-300 via-green-500 to-lime-300 bg-clip-text tracking-tight text-transparent">Get RoadMaps</span> doesn't support mobile view. You can access on desktop.
+                    If there is any issues give feedback on GitHub.
                 </h1>
-                <a href={"https://docs.google.com/forms/d/e/1FAIpQLScNZ6vtlFMkmo0t_dWTx6CXfoEIZzm5KAjg-euCA49046beKw/viewform?usp=sf_link"} target={"_blank"} className="">
-                    <Button>Report</Button>
-                </a>
+                <Link href={"/"} className="">
+                    <Button>Back</Button>
+                </Link>
             </div>
             <div className="hidden xl:flex items-center bg-slate-50 h-screen mx-auto flex-row-reverse">
                 <aside className="flex flex-col items-center w-96 h-screen bg-slate-800 justify-between">
