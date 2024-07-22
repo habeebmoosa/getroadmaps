@@ -1,8 +1,10 @@
 import {GoogleGenerativeAI} from "@google/generative-ai"
+import Roadmaps from "@/models/Roadmaps";
 
 export async function POST(req: Request) {
     const data = await req.json();
     const prompt = data.prompt;
+    const roadmapId = data.roadmapId;
 
     const genAI = new GoogleGenerativeAI(process.env.API_KEY!);
     const model = genAI.getGenerativeModel({ model: "gemini-pro" });
@@ -68,6 +70,16 @@ export async function POST(req: Request) {
             const jsonString = match[1];
             const jsonObject = JSON.parse(jsonString);
             console.log(jsonObject);
+
+            const newRoadmap = {
+                name: prompt,
+                prompt: prompt,
+                roadmap: jsonString,
+            };
+
+            const response = await Roadmaps.findByIdAndUpdate({_id: roadmapId}, newRoadmap, {new:true});
+            console.log(response)
+            
             return new Response(JSON.stringify(jsonObject), {
                 headers: {
                     "Content-Type": "application/json",
